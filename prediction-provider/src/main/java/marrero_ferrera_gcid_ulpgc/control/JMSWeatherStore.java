@@ -11,9 +11,12 @@ public record JMSWeatherStore(String topicName) implements WeatherStore {
     public void insertWeather(String jsonDataContainer) {
         ActiveMQConnectionFactory factory = new ActiveMQConnectionFactory(url);
 
+        System.out.println("CONN ESTABLISHED");
         try {
             Connection connection = (Connection) factory.createConnection();
             connection.start();
+            System.out.println("CONN Started");
+
             Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
             Topic topic = session.createTopic(topicName);
             MessageProducer producer = session.createProducer(topic);
