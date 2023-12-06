@@ -17,6 +17,7 @@ public record JMSWeatherStore(String topicName) implements WeatherStore {
 
             TextMessage message = session.createTextMessage(jsonDataContainer);
             producer.send(message);
+            System.out.println(message);
             connection.close();
         } catch (JMSException e) {
             e.getCause();

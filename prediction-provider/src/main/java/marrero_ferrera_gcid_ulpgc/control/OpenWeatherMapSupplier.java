@@ -46,7 +46,7 @@ public class OpenWeatherMapSupplier implements WeatherSupplier {
                     return new Weather(weatherType, cloud, temperature, humidity, location, ts, rain, wind);
                 }
             }
-            throw new Exception("Location or time were incorrect!"); //TODO convert to exception
+            throw new MySenderException("Location or time were incorrect!");
         } catch (Exception e) {
             throw new JsonParseException(e);
         }

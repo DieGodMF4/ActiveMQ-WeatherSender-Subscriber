@@ -9,7 +9,6 @@ import java.util.Timer;
 
 public class Main {
     public static void main(String[] args) {
-        /*
         if (args.length < 2) {
             System.out.println("Usage: java Main <API Key> <database path>");
             System.exit(1);
@@ -37,12 +36,5 @@ public class Main {
         for (Location location: locationList) {
             timer.scheduleAtFixedRate(new Task(location, apiKey, topicName), delay, period);
         }
-
-         */ //TODO MAIN AND EXCEPTIONS
-        Location location = new Location(28.01f, -15.58f, "Gran Canaria", "Risco Prieto");
-        WeatherController controller = new WeatherController();
-
-        Instant instant = Instant.parse("2023-12-05T12:00:00Z");
-        controller.getAndPublishWeatherData(location, "3c3aea5ce433b076c2f83b0c608896d8", "aa", instant);
     }
 }
