@@ -13,7 +13,7 @@ public record JMSWeatherStore(String topicName) implements WeatherStore {
 
         System.out.println("CONN ESTABLISHED");
         try {
-            Connection connection = (Connection) factory.createConnection();
+            Connection connection = factory.createConnection();
             connection.start();
             System.out.println("CONN Started");
 
@@ -25,7 +25,7 @@ public record JMSWeatherStore(String topicName) implements WeatherStore {
             producer.send(message);
             System.out.println("JSON message sent to topic '" + topicName + "': '" + jsonDataContainer + "'");
             connection.close();
-        } catch (JMSException | jakarta.jms.JMSException e) {
+        } catch (JMSException e) {
             e.getCause();
         }
     }

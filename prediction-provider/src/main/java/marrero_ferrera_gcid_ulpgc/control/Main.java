@@ -38,7 +38,7 @@ public class Main {
             timer.scheduleAtFixedRate(new Task(location, apiKey, topicName), delay, period);
         }
 
-         */
+         */ //TODO MAIN AND EXCEPTIONS
         Location location = new Location(28.01f, -15.58f, "Gran Canaria", "Risco Prieto");
         WeatherController controller = new WeatherController();
 

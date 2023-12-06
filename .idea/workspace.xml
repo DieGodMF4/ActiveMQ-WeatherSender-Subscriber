@@ -4,25 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9543c01-ee6e-4be2-a6d1-1aa636922ef5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event-store-builder/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prediction-provider/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prediction-provider/src/main/java/marrero_ferrera_gcid_ulpgc/control/JMSWeatherStore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prediction-provider/src/main/java/marrero_ferrera_gcid_ulpgc/control/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prediction-provider/src/main/java/marrero_ferrera_gcid_ulpgc/control/OpenWeatherMapSupplier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prediction-provider/src/main/java/marrero_ferrera_gcid_ulpgc/control/Task.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prediction-provider/src/main/java/marrero_ferrera_gcid_ulpgc/control/WeatherController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prediction-provider/src/main/java/marrero_ferrera_gcid_ulpgc/control/WeatherStore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prediction-provider/src/main/java/marrero_ferrera_gcid_ulpgc/control/WeatherSupplier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prediction-provider/src/main/java/marrero_ferrera_gcid_ulpgc/model/Location.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prediction-provider/src/main/java/marrero_ferrera_gcid_ulpgc/model/Weather.java" afterDir="false" />
+    <list default="true" id="f9543c01-ee6e-4be2-a6d1-1aa636922ef5" name="Changes" comment="prediction-provider module complete. Only JMSWeatherStore.java gives ActiveMQConnection problems. POM updated and class improved.">
       <change afterPath="$PROJECT_DIR$/prediction-provider/src/test/java/JsonTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction-provider/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/prediction-provider/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction-provider/src/main/java/marrero_ferrera_gcid_ulpgc/control/JMSWeatherStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/prediction-provider/src/main/java/marrero_ferrera_gcid_ulpgc/control/JMSWeatherStore.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +27,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -61,7 +48,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "C:/Users/dmarr/IdeaProjects/Practice_2/prediction-provider/src/main/java/marrero_ferrera_gcid_ulpgc",
+    "last_opened_file_path": "C:/Users/dmarr/Documents/DACD/Entrega_2/events-store-builder/events-store-builder",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -116,12 +103,46 @@
       <option name="presentableId" value="Default" />
       <updated>1700565099371</updated>
       <workItem from="1701693569604" duration="6830000" />
-      <workItem from="1701769839403" duration="6282000" />
+      <workItem from="1701769839403" duration="13529000" />
+      <workItem from="1701863571091" duration="3709000" />
     </task>
+    <task id="LOCAL-00001" summary="prediction-provider module complete. Only JMSWeatherStore.java gives ActiveMQConnection problems.">
+      <option name="closed" value="true" />
+      <created>1701776689438</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1701776689438</updated>
+    </task>
+    <task id="LOCAL-00002" summary="prediction-provider module complete. Only JMSWeatherStore.java gives ActiveMQConnection problems. POM updated and class improved.">
+      <option name="closed" value="true" />
+      <created>1701797949603</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701797949603</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="prediction-provider module complete. Only JMSWeatherStore.java gives ActiveMQConnection problems." />
+    <MESSAGE value="prediction-provider module complete. Only JMSWeatherStore.java gives ActiveMQConnection problems. POM updated and class improved." />
+    <option name="LAST_COMMIT_MESSAGE" value="prediction-provider module complete. Only JMSWeatherStore.java gives ActiveMQConnection problems. POM updated and class improved." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -134,6 +155,11 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/prediction-provider/src/test/java/JsonTest.java</url>
+          <line>5</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
