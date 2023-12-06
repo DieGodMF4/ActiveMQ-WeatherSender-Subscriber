@@ -9,24 +9,24 @@ public record JMSWeatherStore(String topicName) implements WeatherStore {
 
     @Override
     public void insertWeather(String jsonDataContainer) {
-        ActiveMQConnectionFactory factory = new ActiveMQConnectionFactory(url);
-
-        System.out.println("CONN ESTABLISHED");
         try {
-            Connection connection = factory.createConnection();
-            connection.start();
-            System.out.println("CONN Started");
-
+            Connection connection = buildConnection();
             Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
             Topic topic = session.createTopic(topicName);
             MessageProducer producer = session.createProducer(topic);
 
             TextMessage message = session.createTextMessage(jsonDataContainer);
             producer.send(message);
-            System.out.println("JSON message sent to topic '" + topicName + "': '" + jsonDataContainer + "'");
             connection.close();
         } catch (JMSException e) {
             e.getCause();
         }
+    }
+
+    private static Connection buildConnection () throws JMSException {
+        ConnectionFactory connectionFactory = new ActiveMQConnectionFactory(url);
+        Connection connection = connectionFactory.createConnection();
+        connection.start();
+        return connection;
     }
 }

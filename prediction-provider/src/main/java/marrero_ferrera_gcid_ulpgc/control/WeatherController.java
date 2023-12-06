@@ -27,7 +27,6 @@ public class WeatherController {
                 .registerTypeAdapter(Instant.class, new InstantSerializer())
                 .create();
         String dataContainerToJson = gson.toJson(dataContainer);
-        System.out.println(dataContainerToJson);
         JMSWeatherStore store = new JMSWeatherStore(topicName);
         store.insertWeather(dataContainerToJson);
     }
