@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9543c01-ee6e-4be2-a6d1-1aa636922ef5" name="Changes" comment="EventStoreBuilder module created.">
-      <change afterPath="$PROJECT_DIR$/event-store-builder/src/main/java/marrero_ferrera_gcid_ulpgc/MySubscriberException.java" afterDir="false" />
+    <list default="true" id="f9543c01-ee6e-4be2-a6d1-1aa636922ef5" name="Changes" comment="TopicSubscriber built. ERRORS RECEIVING?">
       <change afterPath="$PROJECT_DIR$/prediction-provider/src/test/java/JsonTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/event-store-builder/src/main/java/marrero_ferrera_gcid_ulpgc/Subscriber.java" beforeDir="false" afterPath="$PROJECT_DIR$/event-store-builder/src/main/java/marrero_ferrera_gcid_ulpgc/Subscriber.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/event-store-builder/src/main/java/marrero_ferrera_gcid_ulpgc/TopicSubscriber.java" beforeDir="false" afterPath="$PROJECT_DIR$/event-store-builder/src/main/java/marrero_ferrera_gcid_ulpgc/TopicSubscriber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction-provider/src/main/java/marrero_ferrera_gcid_ulpgc/control/JMSWeatherStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/prediction-provider/src/main/java/marrero_ferrera_gcid_ulpgc/control/JMSWeatherStore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction-provider/src/main/java/marrero_ferrera_gcid_ulpgc/control/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/prediction-provider/src/main/java/marrero_ferrera_gcid_ulpgc/control/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,23 +43,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;event-store&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/dmarr/Documents/DACD/Entrega_2/events-store-builder/events-store-builder&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "event-store",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "C:/Users/dmarr/Documents/DACD/Entrega_2/events-store-builder/events-store-builder",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "advanced.settings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="marrero_ferrera_gcid_ulpgc" />
@@ -131,7 +125,7 @@
       <workItem from="1701769839403" duration="13529000" />
       <workItem from="1701863571091" duration="6182000" />
       <workItem from="1701893184120" duration="5007000" />
-      <workItem from="1701977147913" duration="5635000" />
+      <workItem from="1701977147913" duration="5995000" />
     </task>
     <task id="LOCAL-00001" summary="prediction-provider module complete. Only JMSWeatherStore.java gives ActiveMQConnection problems.">
       <option name="closed" value="true" />
@@ -181,7 +175,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701899499608</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="TopicSubscriber built. ERRORS RECEIVING?">
+      <option name="closed" value="true" />
+      <created>1701987342584</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1701987342585</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,7 +206,8 @@
     <MESSAGE value="prediction-provider module complete. JMS FUNCTIONAL. REVIEW MAIN AND EXCEPTIONS!" />
     <MESSAGE value="prediction-provider module complete." />
     <MESSAGE value="EventStoreBuilder module created." />
-    <option name="LAST_COMMIT_MESSAGE" value="EventStoreBuilder module created." />
+    <MESSAGE value="TopicSubscriber built. ERRORS RECEIVING?" />
+    <option name="LAST_COMMIT_MESSAGE" value="TopicSubscriber built. ERRORS RECEIVING?" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

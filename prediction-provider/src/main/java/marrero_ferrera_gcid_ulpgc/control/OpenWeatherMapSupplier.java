@@ -59,8 +59,7 @@ public class OpenWeatherMapSupplier implements WeatherSupplier {
         HttpGet httpGet = new HttpGet(httpUrl);
 
         try {
-            HttpResponse response = null;
-            response = httpClient.execute(httpGet);
+            HttpResponse response = httpClient.execute(httpGet);
 
             String json = EntityUtils.toString(response.getEntity());
             return new com.google.gson.JsonParser().parse(json).getAsJsonObject();
