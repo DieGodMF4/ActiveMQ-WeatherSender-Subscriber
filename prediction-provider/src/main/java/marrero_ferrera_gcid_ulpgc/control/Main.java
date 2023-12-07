@@ -10,7 +10,7 @@ import java.util.Timer;
 public class Main {
     public static void main(String[] args) {
         if (args.length < 2) {
-            System.out.println("Usage: java Main <API Key> <database path>");
+            System.out.println("Usage: java Main <API Key> <topic Name>");
             System.exit(1);
         }
 
