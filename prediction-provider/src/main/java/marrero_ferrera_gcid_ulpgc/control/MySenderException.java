@@ -4,5 +4,4 @@ public class MySenderException extends Exception {
     public MySenderException(String message) {
         super(message);
     }
-
 }

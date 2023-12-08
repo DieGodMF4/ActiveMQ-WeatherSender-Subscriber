@@ -7,10 +7,9 @@ import javax.jms.*;
 
 public record TopicSubscriber(String topicName) implements Subscriber {
     private static final String url = ActiveMQConnection.DEFAULT_BROKER_URL;
-    private static final String basePath = "eventstore/prediction.Weather/";
 
     @Override
-    public void receiveMessage() throws MySubscriberException {
+    public String receiveMessage() throws MyReceiverException {
         try {
             Connection connection = buildConnection();
             Session session = connection.createSession(false,
@@ -22,12 +21,14 @@ public record TopicSubscriber(String topicName) implements Subscriber {
             if (message instanceof TextMessage) {
                 TextMessage textMessage = (TextMessage) message;
                 System.out.println("Received message '" + textMessage.getText() + "'");
+                return textMessage.getText();
             } else {
                 System.out.println("NO MESSAGE");
             } connection.close();
         } catch (JMSException e) {
-            throw new MySubscriberException("Error receiving message from ActiveMQ", e);
+            throw new MyReceiverException("Error receiving message from ActiveMQ", e);
         }
+        return null;
     }
 
     private static Connection buildConnection () throws JMSException {

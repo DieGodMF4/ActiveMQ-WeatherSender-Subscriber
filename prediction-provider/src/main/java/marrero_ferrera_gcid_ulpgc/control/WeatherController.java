@@ -3,6 +3,7 @@ package marrero_ferrera_gcid_ulpgc.control;
 import com.google.gson.*;
 import marrero_ferrera_gcid_ulpgc.model.Location;
 import marrero_ferrera_gcid_ulpgc.model.Weather;
+
 import java.lang.reflect.Type;
 import java.time.Clock;
 import java.time.Instant;
@@ -27,6 +28,7 @@ public class WeatherController {
                 .registerTypeAdapter(Instant.class, new InstantSerializer())
                 .create();
         String dataContainerToJson = gson.toJson(dataContainer);
+        System.out.println(dataContainerToJson);
         JMSWeatherStore store = new JMSWeatherStore(topicName);
         store.insertWeather(dataContainerToJson);
     }
@@ -38,10 +40,12 @@ public class WeatherController {
             System.out.println("That weather is already in the list!");
         }
     }
-    public record DataContainer(String ss, long ts, long predTime, Weather weather, Location location) {}
+
+    public record DataContainer(String ss, long ts, long predTime, Weather weather, Location location) {
+    }
 }
 
-    class InstantSerializer implements JsonSerializer<Instant> {
+class InstantSerializer implements JsonSerializer<Instant> {
     @Override
     public JsonElement serialize(Instant instant, Type typeOfSrc, JsonSerializationContext context) {
         return new JsonPrimitive(instant.toString());
