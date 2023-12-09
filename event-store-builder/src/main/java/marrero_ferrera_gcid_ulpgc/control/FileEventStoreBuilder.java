@@ -32,12 +32,10 @@ public class FileEventStoreBuilder implements EventStoreBuilder {
         String fileName = "events.events";
         String fullPath = Paths.get(directoryPath, fileName).toString();
 
-        for (String jsonString: jsonStrings) {
-            writeJsonToFile(fullPath, jsonString);
-        }
+        writeJsonToFile(fullPath, jsonStrings);
     }
 
-    private void writeJsonToFile(String filePath, String jsonString) throws MyReceiverException {
+    private void writeJsonToFile(String filePath, ArrayList<String> jsonStrings) throws MyReceiverException {
         try {
             Path directoryPath = Paths.get(filePath).getParent();
             Files.createDirectories(directoryPath);
@@ -47,7 +45,7 @@ public class FileEventStoreBuilder implements EventStoreBuilder {
             ObjectMapper objectMapper = new ObjectMapper();
             objectMapper.enable(SerializationFeature.INDENT_OUTPUT); // Enable pretty printing
 
-            objectMapper.writeValue(file, jsonString);
+            objectMapper.writeValue(file, jsonStrings);
 
         } catch (IOException e) {
             throw new MyReceiverException("An error occurred while introducing the String into the File.",e);
