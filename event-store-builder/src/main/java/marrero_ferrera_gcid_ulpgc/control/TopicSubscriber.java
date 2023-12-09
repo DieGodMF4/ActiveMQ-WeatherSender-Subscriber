@@ -14,8 +14,7 @@ public record TopicSubscriber(String topicName) implements Subscriber {
         ArrayList<String> answers = new ArrayList<>();
         try {
             Connection connection = buildConnection();
-            Session session = connection.createSession(false,
-                    Session.AUTO_ACKNOWLEDGE);
+            Session session = connection.createSession(false, Session.CLIENT_ACKNOWLEDGE);
             Topic topic = session.createTopic(topicName);
             MessageConsumer consumer = session.createConsumer(topic);
 
@@ -23,6 +22,7 @@ public record TopicSubscriber(String topicName) implements Subscriber {
             while (message != null) {
                 if (message instanceof TextMessage) {
                     TextMessage textMessage = (TextMessage) message;
+                    message.acknowledge();
                     answers.add(textMessage.getText());
                 }
                 message = consumer.receive(2000);
