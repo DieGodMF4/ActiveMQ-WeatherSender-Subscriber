@@ -25,15 +25,14 @@ public record TopicSubscriber(String topicName) implements Subscriber {
                     TextMessage textMessage = (TextMessage) message;
                     answers.add(textMessage.getText());
                 }
-                message = consumer.receive(3000);
+                message = consumer.receive(2000);
             }
-
             connection.close();
+            return answers;
         } catch (
                 JMSException e) {
             throw new MyReceiverException("Error receiving message from ActiveMQ", e);
         }
-        return null;
     }
 
     private static Connection buildConnection() throws JMSException {

@@ -9,7 +9,7 @@ public class Main {
         ArrayList<String> messages = subscriber.receiveMessage();
 
         FileEventStoreBuilder builder = new FileEventStoreBuilder();
-        assert messages != null;
+        assert messages.isEmpty();
         builder.storeMessages(messages);
     }
 }
