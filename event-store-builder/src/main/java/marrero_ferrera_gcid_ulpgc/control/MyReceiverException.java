@@ -4,7 +4,4 @@ public class MyReceiverException extends Exception{
     public MyReceiverException(String message, Exception cause) {
         super(message, cause);
     }
-    public MyReceiverException(Exception cause) {
-        super(cause);
-    }
 }

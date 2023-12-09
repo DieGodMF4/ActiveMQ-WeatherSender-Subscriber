@@ -10,17 +10,18 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 
 public class FileEventStoreBuilder implements EventStoreBuilder {
     private static final String basePath = "eventstore/prediction.Weather/";
 
     @Override
-    public void storeMessage(String jsonString) throws MyReceiverException {
+    public void storeMessages(ArrayList<String> jsonStrings) throws MyReceiverException {
         ObjectMapper objectMapper = new ObjectMapper();
         JsonNode jsonNode = null;
         try {
-            jsonNode = objectMapper.readTree(jsonString);
+            jsonNode = objectMapper.readTree(jsonStrings.get(0));
         } catch (JsonProcessingException e) {
             throw new MyReceiverException("An error occurred while parsing the json String.", e);
         }
@@ -31,7 +32,9 @@ public class FileEventStoreBuilder implements EventStoreBuilder {
         String fileName = "events.events";
         String fullPath = Paths.get(directoryPath, fileName).toString();
 
-        writeJsonToFile(fullPath, jsonString);
+        for (String jsonString: jsonStrings) {
+            writeJsonToFile(fullPath, jsonString);
+        }
     }
 
     private void writeJsonToFile(String filePath, String jsonString) throws MyReceiverException {

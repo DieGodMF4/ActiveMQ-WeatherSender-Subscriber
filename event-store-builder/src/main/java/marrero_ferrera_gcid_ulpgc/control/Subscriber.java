@@ -1,5 +1,7 @@
 package marrero_ferrera_gcid_ulpgc.control;
 
+import java.util.ArrayList;
+
 public interface Subscriber {
-    String receiveMessage() throws MyReceiverException;
+    ArrayList<String> receiveMessage() throws MyReceiverException;
 }
