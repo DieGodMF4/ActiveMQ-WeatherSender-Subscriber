@@ -1,55 +1,42 @@
 package marrero_ferrera_gcid_ulpgc.control;
 
-import jakarta.jms.*;
+import org.apache.activemq.ActiveMQConnection;
 import org.apache.activemq.ActiveMQConnectionFactory;
 
-public record TopicSubscriber(String topicName, String consumerName, String clientId) implements Subscriber {
-    private static final String url = "tcp://localhost:61616";
+import javax.jms.*;
 
+public record TopicSubscriber(String topicName) implements Subscriber {
+    private static final String url = ActiveMQConnection.DEFAULT_BROKER_URL;
 
     @Override
-    public void receiveMessage(Listener listener) throws MyReceiverException {
-        ConnectionFactory connectionFactory = new ActiveMQConnectionFactory(url);
-        Session session;
-        Topic topic;
-
+    public String receiveMessage() throws MyReceiverException {
         try {
-            Connection connection = connectionFactory.createConnection();
-            connection.setClientID(clientId);
-            connection.start();
-            session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
-            topic = session.createTopic(topicName);
-        } catch (JMSException e) {
-            throw new MyReceiverException("An error occurred while connecting to ActiveMQ.", e);
-        }
-        MessageConsumer consumer = null;
-        try {
-            consumer = session.createDurableConsumer(topic, this.consumerName);
-        } catch (JMSException e) {
-            throw new MyReceiverException("An error occurred while creating the session.", e);
-        }
+            Connection connection = buildConnection();
+            Session session = connection.createSession(false,
+                    Session.AUTO_ACKNOWLEDGE);
+            Topic topic = session.createTopic(topicName);
+            MessageConsumer consumer = session.createConsumer(topic);
 
-        try {
-            consumer.setMessageListener(message -> {
-                try {
-                    String txt = ((TextMessage) message).getText();
-                    listener.consume(txt);
-                } catch (JMSException e) {
-                    e.printStackTrace();
-                }
-            });
+            Message message = consumer.receive();
+            if (message instanceof TextMessage) {
+                TextMessage textMessage = (TextMessage) message;
+                System.out.println("Received message '" + textMessage.getText() + "'");
+                return textMessage.getText();
+            } else {
+                System.out.println("NO MESSAGE");
+            }
+            connection.close();
         } catch (JMSException e) {
-            throw new MyReceiverException(e);
+            throw new MyReceiverException("Error receiving message from ActiveMQ", e);
         }
-}
+        return null;
+    }
 
-    /*
-    private static Connection buildConnection () {
+    private static Connection buildConnection() throws JMSException {
         ConnectionFactory connectionFactory = new ActiveMQConnectionFactory(url);
         Connection connection = connectionFactory.createConnection();
         connection.start();
         return connection;
     }
-
-     */
 }
+

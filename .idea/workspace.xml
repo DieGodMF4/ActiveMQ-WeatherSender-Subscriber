@@ -4,15 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9543c01-ee6e-4be2-a6d1-1aa636922ef5" name="Changes" comment="TopicSubscriber built. ERRORS RECEIVING?">
+    <list default="true" id="f9543c01-ee6e-4be2-a6d1-1aa636922ef5" name="Changes" comment="TopicSubscriber alternative.">
+      <change afterPath="$PROJECT_DIR$/event-store-builder/src/main/java/marrero_ferrera_gcid_ulpgc/control/EventStoreBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/event-store-builder/src/test/java/JsonTest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/prediction-provider/src/test/java/JsonTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/event-store-builder/src/main/java/marrero_ferrera_gcid_ulpgc/FileEventStoreBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/event-store-builder/src/main/java/marrero_ferrera_gcid_ulpgc/FileEventStoreBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/event-store-builder/src/main/java/marrero_ferrera_gcid_ulpgc/MySubscriberException.java" beforeDir="false" afterPath="$PROJECT_DIR$/event-store-builder/src/main/java/marrero_ferrera_gcid_ulpgc/MyReceiverException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/event-store-builder/src/main/java/marrero_ferrera_gcid_ulpgc/Subscriber.java" beforeDir="false" afterPath="$PROJECT_DIR$/event-store-builder/src/main/java/marrero_ferrera_gcid_ulpgc/Subscriber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/event-store-builder/src/main/java/marrero_ferrera_gcid_ulpgc/TopicSubscriber.java" beforeDir="false" afterPath="$PROJECT_DIR$/event-store-builder/src/main/java/marrero_ferrera_gcid_ulpgc/TopicSubscriber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction-provider/src/main/java/marrero_ferrera_gcid_ulpgc/control/MySenderException.java" beforeDir="false" afterPath="$PROJECT_DIR$/prediction-provider/src/main/java/marrero_ferrera_gcid_ulpgc/control/MySenderException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction-provider/src/main/java/marrero_ferrera_gcid_ulpgc/control/WeatherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/prediction-provider/src/main/java/marrero_ferrera_gcid_ulpgc/control/WeatherController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event-store-builder/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/event-store-builder/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event-store-builder/src/main/java/marrero_ferrera_gcid_ulpgc/EventStoreBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/event-store-builder/src/main/java/marrero_ferrera_gcid_ulpgc/FileEventStoreBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/event-store-builder/src/main/java/marrero_ferrera_gcid_ulpgc/control/FileEventStoreBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event-store-builder/src/main/java/marrero_ferrera_gcid_ulpgc/MyReceiverException.java" beforeDir="false" afterPath="$PROJECT_DIR$/event-store-builder/src/main/java/marrero_ferrera_gcid_ulpgc/control/MyReceiverException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event-store-builder/src/main/java/marrero_ferrera_gcid_ulpgc/Subscriber.java" beforeDir="false" afterPath="$PROJECT_DIR$/event-store-builder/src/main/java/marrero_ferrera_gcid_ulpgc/control/Subscriber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event-store-builder/src/main/java/marrero_ferrera_gcid_ulpgc/control/TopicSubscriber.java" beforeDir="false" afterPath="$PROJECT_DIR$/event-store-builder/src/main/java/marrero_ferrera_gcid_ulpgc/control/TopicSubscriber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction-provider/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/prediction-provider/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,22 +52,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;event-store&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/dmarr/Documents/DACD/Entrega_2/events-store-builder/events-store-builder&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "event-store",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "C:/Users/dmarr/Documents/DACD/ejemplo_sourcing/publisher-subscriber",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "advanced.settings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="marrero_ferrera_gcid_ulpgc" />
@@ -77,6 +80,13 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
+    <configuration name="JsonTest (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="JsonTest" />
+      <module name="event-store-builder" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="JsonTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="JsonTest" />
       <module name="prediction-provider" />
@@ -98,12 +108,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="marrero_ferrera_gcid_ulpgc.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="marrero_ferrera_gcid_ulpgc.Main" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="marrero_ferrera_gcid_ulpgc.control.Main" />
       <module name="event-store-builder" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="marrero_ferrera_gcid_ulpgc.*" />
+          <option name="PATTERN" value="marrero_ferrera_gcid_ulpgc.control.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -114,6 +124,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.JsonTest (1)" />
         <item itemvalue="Application.marrero_ferrera_gcid_ulpgc.Main" />
         <item itemvalue="Application.JsonTest" />
       </list>
@@ -132,7 +143,8 @@
       <workItem from="1701863571091" duration="6182000" />
       <workItem from="1701893184120" duration="5007000" />
       <workItem from="1701977147913" duration="6689000" />
-      <workItem from="1702037920144" duration="2431000" />
+      <workItem from="1702037920144" duration="2858000" />
+      <workItem from="1702127387960" duration="6695000" />
     </task>
     <task id="LOCAL-00001" summary="prediction-provider module complete. Only JMSWeatherStore.java gives ActiveMQConnection problems.">
       <option name="closed" value="true" />
@@ -198,7 +210,23 @@
       <option name="project" value="LOCAL" />
       <updated>1701987871384</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="FileEventStoreBuilder prototype built.">
+      <option name="closed" value="true" />
+      <created>1702040777553</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1702040777553</updated>
+    </task>
+    <task id="LOCAL-00010" summary="TopicSubscriber alternative.">
+      <option name="closed" value="true" />
+      <created>1702132063990</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1702132063992</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,7 +250,9 @@
     <MESSAGE value="prediction-provider module complete." />
     <MESSAGE value="EventStoreBuilder module created." />
     <MESSAGE value="TopicSubscriber built. ERRORS RECEIVING?" />
-    <option name="LAST_COMMIT_MESSAGE" value="TopicSubscriber built. ERRORS RECEIVING?" />
+    <MESSAGE value="FileEventStoreBuilder prototype built." />
+    <MESSAGE value="TopicSubscriber alternative." />
+    <option name="LAST_COMMIT_MESSAGE" value="TopicSubscriber alternative." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -237,8 +267,8 @@
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/event-store-builder/src/main/java/marrero_ferrera_gcid_ulpgc/TopicSubscriber.java</url>
-          <line>11</line>
+          <url>file://$PROJECT_DIR$/event-store-builder/src/main/java/marrero_ferrera_gcid_ulpgc/control/TopicSubscriber.java</url>
+          <line>14</line>
           <properties class="marrero_ferrera_gcid_ulpgc.TopicSubscriber" method="receiveMessage">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
