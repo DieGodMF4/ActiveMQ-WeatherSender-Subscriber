@@ -14,7 +14,12 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class FileEventStoreBuilder implements EventStoreBuilder {
-    private static final String basePath = "eventstore/prediction.Weather/";
+
+    private final String basePath;
+
+    public FileEventStoreBuilder(String basePath) {
+        this.basePath = basePath;
+    }
 
     @Override
     public void storeMessages(ArrayList<String> jsonStrings) throws MyReceiverException {
