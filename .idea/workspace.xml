@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9543c01-ee6e-4be2-a6d1-1aa636922ef5" name="Changes" comment="COMPLETE. solve TopicSubscriber receiver??">
+    <list default="true" id="f9543c01-ee6e-4be2-a6d1-1aa636922ef5" name="Changes" comment="FINAL COMMIT.">
       <change afterPath="$PROJECT_DIR$/event-store-builder/src/test/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/event-store-builder/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/event-store-builder/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/event-store-builder/src/main/java/marrero_ferrera_gcid_ulpgc/control/FileEventStoreBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/event-store-builder/src/main/java/marrero_ferrera_gcid_ulpgc/control/FileEventStoreBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/event-store-builder/src/main/java/marrero_ferrera_gcid_ulpgc/control/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/event-store-builder/src/main/java/marrero_ferrera_gcid_ulpgc/control/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/event-store-builder/src/main/java/marrero_ferrera_gcid_ulpgc/control/MyReceiverException.java" beforeDir="false" afterPath="$PROJECT_DIR$/event-store-builder/src/main/java/marrero_ferrera_gcid_ulpgc/control/MyReceiverException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/event-store-builder/src/main/java/marrero_ferrera_gcid_ulpgc/control/TopicSubscriber.java" beforeDir="false" afterPath="$PROJECT_DIR$/event-store-builder/src/main/java/marrero_ferrera_gcid_ulpgc/control/TopicSubscriber.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/event-store-builder/src/test/java/JsonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/event-store-builder/src/test/java/JsonTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction-provider/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/prediction-provider/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +77,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="JsonTest (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="JsonTest" />
       <module name="event-store-builder" />
@@ -154,8 +148,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.JsonTest (1)" />
         <item itemvalue="Application.JsonTest" />
       </list>
@@ -177,7 +171,7 @@
       <workItem from="1702037920144" duration="2858000" />
       <workItem from="1702127387960" duration="11162000" />
       <workItem from="1702140476666" duration="12666000" />
-      <workItem from="1702212918209" duration="5727000" />
+      <workItem from="1702212918209" duration="6729000" />
     </task>
     <task id="LOCAL-00001" summary="prediction-provider module complete. Only JMSWeatherStore.java gives ActiveMQConnection problems.">
       <option name="closed" value="true" />
@@ -307,7 +301,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702159277515</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="FINAL COMMIT.">
+      <option name="closed" value="true" />
+      <created>1702226060518</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1702226060518</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -335,7 +337,8 @@
     <MESSAGE value="TopicSubscriber alternative." />
     <MESSAGE value="FileEventStoreBuilder built. Receiver still not working propperly." />
     <MESSAGE value="COMPLETE. solve TopicSubscriber receiver??" />
-    <option name="LAST_COMMIT_MESSAGE" value="COMPLETE. solve TopicSubscriber receiver??" />
+    <MESSAGE value="FINAL COMMIT." />
+    <option name="LAST_COMMIT_MESSAGE" value="FINAL COMMIT." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -366,7 +369,7 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/prediction-provider/src/main/java/marrero_ferrera_gcid_ulpgc/control/Main.java</url>
           <line>9</line>
-          <option name="timeStamp" value="5" />
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
