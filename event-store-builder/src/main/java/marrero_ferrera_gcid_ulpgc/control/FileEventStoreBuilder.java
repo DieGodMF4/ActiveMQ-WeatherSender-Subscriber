@@ -38,8 +38,8 @@ public class FileEventStoreBuilder implements EventStoreBuilder {
             String source = getSource(jsonNode);
             String date = extractDate(jsonNode);
 
-            String directoryPath = basePath + source + "/" + date;
-            String fileName = "events.events";
+            String directoryPath = basePath + source + "/";
+            String fileName = date + ".events";
             String fullPath = Paths.get(directoryPath, fileName).toString();
 
             writeJsonToFile(fullPath, jsonString);
